@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    max-width: 640px;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+header, main, footer{
+    border: 2px solid lightgray;
+}
+
+header, footer{
+    background-color: lightblue;
+    padding: 2%;
+    margin: 20px 0;
+}
+
+section{
+    border: 10px solid lightblue;
+    padding: 2%;
+}
+
+@media screen and (min-width: 500px) {
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
