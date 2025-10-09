@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Form</title>
+    <link rel="stylesheet" href="form-demo.css" />
+    <script src="form-demo.js" defer></script>
+  </head>
+  <body>
+    <header><h1>Checkout</h1></header>
+    <main>
+      <section class="errors"></section>
+      <form id="checkoutForm" action="completed.html">
+        <p>
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required>
+        </p>
+        <p>
+            <label for="email">Emall</label>
+            <input type="email" id="email" name="email" required>
+        </p>
+        <p>
+            <label for="adress">Adress</label>
+            <textarea id="adress" name="adress" required></textarea>
+        </p>
+        <p>
+            <label for="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="">Select the payment method</option>
+                <option value="creditCard">Credit Card</option>
+                <option value="paypal">Paypal</option>
+            </select>
+        </p>
+        <p class="hide">
+            <label for="creditCard">Credit Card Number</label>
+            <input type="text" id="creditCard" name="creditCard" pattern="[0-9]{16}">
+        </p>
+        <p class="hide">
+            <label for="paypal">PayPal Username: </label>
+            <input type="text" id="paypal" name="paypal">
+        </p>
+        <button>Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
