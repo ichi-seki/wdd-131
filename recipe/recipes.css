@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Caveat:wght@400..700&family=Sue+Ellen+Francisco&display=swap');
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+nav a img{
+    height: 80px;
+    width: auto;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 40px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+h1, h2{
+    font-family: "Amatic SC", "Sue Ellen Francisco", "Caveat", cursive;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 20px 0;
+}
+
+#searchBar{
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+#searchButton{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+}
+
+/* recipe */
+
+.recipe_card{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    padding-bottom: 35px;
+}
+
+.recipe_card img{
+    width: 400px;
+    height: auto;
+}
+
+.tags button{
+    background-color: white;
+    font-size: 20px;
+    border: 1.5px solid black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 5px 10px 0;
+    cursor: pointer;
+}
+
+a h2{
+    font-size: 35px;
+    color: #34b0ea;
+    margin: 25px 0 0 0;
+}
+
+.rating{
+    font-size: 24px;
+    letter-spacing: -2px;
+}
+
+footer{
+    text-align: center;
+    padding: 20px 0 10px 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: #34b0ea;
+    font-size: 14px;
+}
+
+.social img{
+    height: 50px;
+    width: auto;
+}
+
+hr{
+    margin: 0 5%;
+}
+
+
+
+@media (min-width: 600px) {
+    #searchBar{
+        width: 80%;
+    }
+    
+    .recipe_card{
+        display: flex;
+        align-items: flex-start;
+        margin: 20px 10%;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .image-container{
+        width: 400px;
+        height: auto;
+        margin-right: 20px;
+        flex-shrink: 0;
+    }
+
+    .information{
+        justify-content: flex-start;
+    }
+
+    p{
+        font-size: 18px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 10%;
+    }
+}
