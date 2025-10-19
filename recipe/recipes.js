@@ -280,6 +280,11 @@ const recipes = [
 	}
 ]
 
+function getRandomListItem(list) {
+	const randomIndex = Math.floor(Math.random() * list.length);
+	return list[randomIndex];
+}
+
 
 function tagsTemplate(tags) {
     return tags.map(tag => `<button id="${tag}">${tag}</button>`).join('');
@@ -297,7 +302,13 @@ function ratingTemplate(rating) {
 	return html;
 }
 
+function init() {
+	const randomRecipe = getRandomListItem(recipes);
+	displayRecipe(randomRecipe);
+}
+
 const outputPlace = document.querySelector('#outputPlace');
+
 function displayRecipes() {
 	outputPlace.innerHTML = '';
 	recipes.forEach(recipe => {
