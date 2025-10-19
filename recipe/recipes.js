@@ -286,7 +286,15 @@ function tagsTemplate(tags) {
 }
 
 function ratingTemplate(rating) {
-	
+	let html = '';
+	for (let i = 0; i <= 4; i++) {
+		if (i < rating) {
+			html += ('<span aria-hidden="true" class="icon-star">⭐️</span>');
+		} else {
+			html += ('<span aria-hidden="true" class="icon-star-empty">☆</span>');
+		}
+	}
+	return html;
 }
 
 const outputPlace = document.querySelector('#outputPlace');
@@ -305,11 +313,7 @@ function displayRecipes() {
 			</div>
 			<a href="${recipe.url}" class="recipe_link"><h2>${recipe.name}</h2></a>
 			<span class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
-				<span aria-hidden="true" class="icon-star">⭐️</span>
-				<span aria-hidden="true" class="icon-star">⭐️</span>
-				<span aria-hidden="true" class="icon-star">⭐️</span>
-				<span aria-hidden="true" class="icon-star">⭐️</span>
-				<span aria-hidden="true" class="icon-star-empty">☆</span>
+				${ratingTemplate(recipe.rating)}
 			</span>
 			<p>${recipe.description}</p>
 		</div>`;
