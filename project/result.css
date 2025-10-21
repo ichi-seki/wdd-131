@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+
+main{
+    max-width: 600px;
+    padding: 0 60px;
+    margin: auto;
+}
+
+a img{
+    height: 50px;
+    width: auto;
+    margin: 20px 40px 0 40px;
+}
+
+h1, h2{
+    text-align: center;
+    color: rgb(245, 202, 46);
+}
+
+h2{
+    margin-top: 40px;
+}
+
+#restartButton{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: rgb(74, 75, 79);
+    color: rgb(203, 203, 203);
+    display: block;
+    margin: auto;
+    width: 250px;
+    text-align: center;
+}
+
+p{
+    line-height: 20px;
+}

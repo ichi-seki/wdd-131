@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Speed Target Game">
+    <meta property="og:title" content="Speed Target">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="A simple game where you press buttons to align a number display.">
+    <meta property="og:image" content="images/logo_light.webp">
+    <meta property="og:url" content="#">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+    <title>Speed Target</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="images/logo_light.png" alt="Logo"></a>
+        </nav>
+        <h1 class="visually-hidden">Speed Target Game</h1>
+    </header>
+    <main>
+         <p id="roundDisplay"></p>
+
+        <div id="scoreDisplay">
+            <div id="target">
+                <span id="targetLabel">Target:</span>
+                <span id="targetNumber"><strong></strong></span>
+            </div>
+            <hr>
+            <div id="current">
+                <span id="currentLabel">Current:</span>
+                <span id="currentNumber"><strong></strong></span>
+            </div>
+        </div>
+        <div class="counter">
+            <p><strong>Moves: <span id="countMoves"></span></strong></p>
+            <p><strong>Time: <span id="timeCounter"></span></strong></p>
+        </div>
+        <div class="button-container">
+            <button id="btn_plus_100" class="plus">+100</button>
+            <button id="btn_plus_10" class="plus">+10</button>
+            <button id="btn_plus_1" class="plus">+1</button>
+            <button id="btn_minus_100" class="minus">-100</button>
+            <button id="btn_minus_10" class="minus">-10</button>
+            <button id="btn_minus_1" class="minus">-1</button>
+        </div>
+        <div id="messageArea">
+            Press the button and align the number!
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Speed Target Game</p>
+    </footer>
+</body>
+</html>

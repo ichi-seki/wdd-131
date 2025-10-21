@@ -302,16 +302,11 @@ function ratingTemplate(rating) {
 	return html;
 }
 
-function init() {
-	const randomRecipe = getRandomListItem(recipes);
-	displayRecipe(randomRecipe);
-}
-
 const outputPlace = document.querySelector('#outputPlace');
 
-function displayRecipes() {
+function displayRecipes(recipeList) {
 	outputPlace.innerHTML = '';
-	recipes.forEach(recipe => {
+	recipeList.forEach(recipe => {
 		const recipeCard = document.createElement('div');
 		recipeCard.classList.add('recipe_card');
 		const recipeHTML = `
@@ -334,5 +329,10 @@ function displayRecipes() {
 	})
 }
 
+function init() {
+	const randomRecipe = getRandomListItem(recipes);
+	displayRecipes([randomRecipe]);
+}
 
-displayRecipes();
+
+init();

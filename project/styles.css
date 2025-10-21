@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+}
+
+main{
+    max-width: 600px;
+    margin: auto;
+    padding: 0 60px
+}
+
+a img{
+    height: 50px;
+    width: auto;
+    margin: 20px 40px -20px 40px;
+}
+
+p{
+    color: white;
+}
+
+span{
+    color: white;
+}
+
+#roundDisplay{
+    text-align: center;
+    font-size: 20px;;
+}
+
+/* score */
+#scoreDisplay{
+    background-color: rgb(74, 75, 79);
+    padding: 10px;
+    border-radius: 30px;
+}
+
+#target, #current{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#targetLabel, #currentLabel{
+    font-size: 24px;
+}
+
+#targetNumber, #currentNumber{
+    font-size: 40px;
+}
+
+.counter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#targetNumber, #countMoves, #timeCounter{
+    color: rgb(245, 202, 46);
+}
+
+/* button */
+.button-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px 15px;
+    margin-top: 20px;;
+}
+
+button{
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+.plus{
+    background-color: rgb(69, 228, 37);
+}
+
+.minus{
+    background-color: rgb(200, 27, 27);
+    color: white;
+}
+
+/* div */
+#messageArea{
+    background-color: rgb(74, 75, 79);
+    text-align: center;
+    color: rgb(195, 197, 198);
+    font-size: 20px;
+    margin-top: 40px;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+footer{
+    text-align: center;
+    margin-top: 50px;
+}
