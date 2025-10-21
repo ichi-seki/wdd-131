@@ -329,6 +329,38 @@ function displayRecipes(recipeList) {
 	})
 }
 
+function filterRecipes(query){
+	const filtered = recipes.filter(recipe => {
+		const nameMatch = recipe.name.toLowerCase().includes(query);
+		const descriptionMatch = recipe.description.toLowerCase().includes(query);
+		const tagMatch = recipe.tags.some(tag => tag.toLowerCase().includes(query));
+		const ingredientMatch = recipe.recipeIngredient.some(ingredient => ingredient.toLowerCase().includes(query));
+
+		return nameMatch || descriptionMatch || tagMatch || ingredientMatch;
+	});
+	const sorted = filtered.sort((a,b) => {
+		return a.name.localeCompare(b.name);
+	})
+		return sorted
+}
+
+function searchHandler(e){
+	e.preventDefault();
+	const query = searchBar.value.toLowerCase();
+	const filteredList = filterRecipes(query)
+	displayRecipes(filteredList);
+}
+
+const searchBar = document.querySelector('#searchBar');
+const searchButton = document.querySelector('#searchButton');
+
+searchButton.addEventListener('click', searchHandler);
+searchBar.addEventListener('keyup', (e) => {
+	if (e.key === 'Enter'){
+		searchHandler(e);
+	}
+});
+
 function init() {
 	const randomRecipe = getRandomListItem(recipes);
 	displayRecipes([randomRecipe]);
