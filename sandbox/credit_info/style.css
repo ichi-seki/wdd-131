@@ -1,0 +1,94 @@
+.card{
+    display: grid;
+    grid-template-columns: 1fr 270px 1fr;
+    grid-template-rows: 1fr 10fr 1fr 1.5fr;
+    gap: 20px;
+    max-width: 530px;
+}
+
+.front_card, .back_card{
+    background-color: lightgray;
+    /* width: 390px;
+    height: 250px; */
+    border-radius: 5px;
+    width: 350px;
+}
+
+.front_card{
+    box-shadow: 4px 4px 10px rgb(185, 185, 185);
+    grid-column: 1/3;
+    grid-row: 1/3;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 90px;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    z-index: 2;
+}
+
+label{
+    font-size: 14px;
+}
+
+input{
+    font-size: 16px;
+    padding: 3px;
+}
+
+p{
+    grid-column: 1/2;
+    margin: 0;
+}
+
+img{
+    grid-column: 2/3;
+    justify-self: end;
+}
+
+.top{
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+.back_card{
+    z-index: 1;
+    grid-column: 2/4;
+    grid-row: 2/4;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 90px;
+    grid-template-rows: 1fr 1fr;
+}
+
+button{
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+
+#month, #year{
+    width: 30px;
+}
+
+#card_num, #name{
+    width: 97.5%;
+}
+
+.cvc{
+    align-self: end;
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+#cvc_cvv{
+    width: 70px;
+}
+
+.black{
+    background-color: black;
+    grid-row: 1/2;
+    height: 40px;
+    width: 130px;
+    margin-right: -25px;
+    grid-column: 2/3;
+    justify-self: end;
+}
