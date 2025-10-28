@@ -9,7 +9,7 @@ body{
 main{
     max-width: 600px;
     padding: 0 60px;
-    margin: auto;
+    margin: -40px auto;
 }
 
 a img{
@@ -35,11 +35,33 @@ h2{
     background-color: rgb(74, 75, 79);
     color: rgb(203, 203, 203);
     display: block;
-    margin: auto;
+    margin: 20px auto;
     width: 250px;
     text-align: center;
 }
 
 p{
     line-height: 20px;
+}
+
+li{
+    line-height: 60px;
+}
+
+.result{
+    background-color: rgb(74, 75, 79);
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+
+.user_result{
+    padding-bottom: 20px;
+}
+
+h2{
+    margin: 20px 0 0 0;
+}
+
+button #restartButton:active{
+    transform: 0 5px;
 }

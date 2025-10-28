@@ -15,6 +15,27 @@
     <title>Speed Target</title>
 </head>
 <body>
+    <div id="popupOverlay">
+        <div id="popupModal">
+            <h2>How to play</h2>
+            <div class="left_rule">
+                <p>Press the buttons to align with the target number</p>
+                <img src="images/rule1.png" alt="press buttons to add and reduce the number">
+            </div>
+                <div class="right_rule">
+                <p>It will count the moves and a time for each round</p>
+                <img src="images/rule2.png" alt="counting  moves and time">
+                <p>The competition is based on the total number of moves and time over 10 rounds.</p>
+                <img src="images/rule3.png" alt="the result after 10 rounds">
+            </div>
+            <div class="readyButton">
+                <button id="readyB">Ready</button>
+            </div>
+        </div>
+    </div>
+    <div id="countdownOverlay" class="hidden">
+        <span id="countdownTimer">3</span>
+    </div>
     <header>
         <nav>
             <a href="index.html"><img src="images/logo_light.png" alt="Logo"></a>
@@ -27,12 +48,12 @@
         <div id="scoreDisplay">
             <div id="target">
                 <span id="targetLabel">Target:</span>
-                <span id="targetNumber"><strong></strong></span>
+                <span><strong id="targetNumber"></strong></span>
             </div>
             <hr>
             <div id="current">
                 <span id="currentLabel">Current:</span>
-                <span id="currentNumber"><strong></strong></span>
+                <span><strong id="currentNumber"></strong></span>
             </div>
         </div>
         <div class="counter">
@@ -54,5 +75,6 @@
     <footer>
         <p>&copy; 2025 Speed Target Game</p>
     </footer>
+    
 </body>
 </html>
